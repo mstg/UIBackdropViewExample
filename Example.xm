@@ -6,10 +6,10 @@
 
 @implementation CreateView
   - (void)create {
-    deviceWidth = [UIScreen mainScreen].bounds.size.width;
-    smallFrame = CGRectMake(0, 0, deviceWidth, 20);
+    CGFloat *deviceWidth = [UIScreen mainScreen].bounds.size.width;
+    CGRect smallFrame = CGRectMake(0, 0, deviceWidth, 20);
 
-    smallView = [[UIWindow alloc] initWithFrame:smallFrame];
+    UIWindow *smallView = [[UIWindow alloc] initWithFrame:smallFrame];
     smallView.backgroundColor = [UIColor blackColor];
     smallView.windowLevel = UIWindowLevelAlert;
 
